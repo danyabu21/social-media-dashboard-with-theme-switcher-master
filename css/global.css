@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+  /* ### Primary Colors */
+
+  --LimeGreen: hsl(163, 72%, 41%);
+  --BrightRed: hsl(356, 69%, 56%);
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --YouTube: hsl(348, 97%, 39%);
+  --ToggleBG: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  --Toggle: hsl(230, 22%, 74%);
+  --ToggleDark: hsl(232, 19%, 15%);
+
+  /* ####  Theme */
+
+  --backGroundColor: hsl(0, 0%, 100%);
+  --backgroundHeader: hsl(225, 100%, 98%);
+  --backgroundCard: hsl(227, 47%, 96%);
+  --textColor1: hsl(228, 12%, 44%);
+  --textColor2: hsl(230, 17%, 14%);
+  --DividerColor: rgba(0, 0, 0, 0.2);
+}
+
+html[dark="true"]:root {
+  /* #### Theme */
+
+  --backGroundColor: hsl(225, 17%, 14%);
+  --backgroundHeader: hsl(232, 19%, 15%);
+  --backgroundCard: hsl(228, 28%, 20%);
+  --textColor1: hsl(228, 34%, 66%);
+  --textColor2: hsl(0, 0%, 100%);
+  --DividerColor: hsl(228, 34%, 66%);
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+a,
+span {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--backGroundColor);
+  animation: showContent 0.6s forwards;
+}
+
+@keyframes showContent {
+  from {
+    opacity: 0;
+    transform: translate3d(-130px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.background-card {
+  background-color: var(--backgroundCard);
+}
+
+.footer {
+  display: block;
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1440px;
+  text-align: center;
+  color: var(--textColor2);
+}
+
+.footer a {
+  color: var(--Facebook);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: hsl(329, 70%, 58%);
+}
